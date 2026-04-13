@@ -16,4 +16,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Long-running (in progress demo)
-        run: echo "Sleeping…" && sleep 240
+        run: echo "Sleeping…" && sleep 2400
