@@ -1,0 +1,19 @@
+name: mock delta (pass + waiting)
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [mock/bm-e2e]
+jobs:
+  passing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Passing check
+        run: echo "bm-mock-delta OK"
+  waiting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Long-running (in progress demo)
+        run: echo "Sleeping…" && sleep 240
